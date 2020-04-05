@@ -3,6 +3,9 @@ window.addEventListener('load', ()=> {
     let lat;
 
     if(navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition
+        navigator.geolocation.getCurrentPosition(position => {
+            long = position.coords.longitude;
+            lat = position.coords.latitude;
+        });
     }
-})
+});
